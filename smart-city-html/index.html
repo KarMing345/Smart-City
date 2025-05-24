@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate-key="马六甲智慧城市">马六甲智慧城市</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo">
+                <h1 data-translate-key="马六甲智慧城市">马六甲智慧城市</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" data-translate-key="首页">首页</a>
+                <a href="#" data-translate-key="服务">服务</a>
+                <a href="#" data-translate-key="关于">关于</a>
+            </nav>
+            <div class="language-switcher">
+                <button onclick="setLanguage('zh')">中文</button>
+                <button onclick="setLanguage('en')">EN</button>
+                <button onclick="setLanguage('ms')">BM</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <h2 data-translate-key="欢迎来到马六甲智慧城市">欢迎来到马六甲智慧城市</h2>
+                <p data-translate-key="打造更智能、更宜居的未来城市">打造更智能、更宜居的未来城市</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" data-translate-key="了解更多">了解更多</button>
+                    <button class="btn btn-secondary" data-translate-key="紧急服务" onclick="showEmergencyModal()">紧急服务</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚗</div>
+                        <h3 data-translate-key="智慧交通">智慧交通</h3>
+                        <p data-translate-key="实时交通监控、智能信号灯控制、停车位管理等智能交通解决方案。">实时交通监控、智能信号灯控制、停车位管理等智能交通解决方案。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌱</div>
+                        <h3 data-translate-key="智慧环保">智慧环保</h3>
+                        <p data-translate-key="空气质量监测、垃圾分类管理、节能减排等环保监测系统。">空气质量监测、垃圾分类管理、节能减排等环保监测系统。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏛️</div>
+                        <h3 data-translate-key="智慧政务">智慧政务</h3>
+                        <p data-translate-key="在线政务服务、市民服务平台、城市管理等智能化服务。">在线政务服务、市民服务平台、城市管理等智能化服务。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="emergency-response-section">
+            <div class="container">
+                <h2 class="section-title" data-translate-key="紧急服务">紧急服务</h2>
+                <div class="emergency-buttons">
+                    <button class="btn btn-danger" onclick="handleEmergency('medical')"><span class="icon">🚑</span> <span data-translate-key="医疗急救">医疗急救</span></button>
+                    <button class="btn btn-warning" onclick="handleEmergency('fire')"><span class="icon">🔥</span> <span data-translate-key="消防救援">消防救援</span></button>
+                    <button class="btn btn-info" onclick="handleEmergency('police')"><span class="icon">🚓</span> <span data-translate-key="警察援助">警察援助</span></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="ai-assistant-fab" onclick="toggleAIAssistant()">
+        <span class="icon">🤖</span>
+    </div>
+
+    <div class="ai-assistant-chat-window" id="aiAssistantWindow">
+        <div class="chat-header">
+            <h3 data-translate-key="智慧城市助手">智慧城市助手</h3>
+            <button class="close-chat" onclick="toggleAIAssistant()">&times;</button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Chat messages will be appended here -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="输入您的问题...">
+            <button onclick="sendChatMessage()" data-translate-key="发送">发送</button>
+        </div>
+    </div>
+
+    <div class="modal" id="emergencyModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeEmergencyModal()">&times;</span>
+            <h3 data-translate-key="确认发送紧急求助">确认发送紧急求助</h3>
+            <p data-translate-key="您确定要发送紧急求助吗？此操作将立即通知相关救援人员。">您确定要发送紧急求助吗？此操作将立即通知相关救援人员。</p>
+            <div class="modal-buttons">
+                <button class="btn btn-danger" id="confirmEmergencyButton" data-translate-key="确认">确认</button>
+                <button class="btn btn-secondary" onclick="closeEmergencyModal()" data-translate-key="取消">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 <span data-translate-key="马六甲智慧城市">马六甲智慧城市</span>. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html> 
